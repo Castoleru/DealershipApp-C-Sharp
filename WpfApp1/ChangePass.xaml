@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfApp1.ChangePass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        mc:Ignorable="d"
+        Title="ChangePass" Height="625" Width="500" WindowStyle="None" Icon="Assests\Logo(1).ico" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Window.Triggers>
+
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation From="0" To="1" Duration="0:0:1" Storyboard.TargetProperty="Opacity">
+
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+
+
+
+    </Window.Triggers>
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush >
+                    <GradientStop Color="#C5E1A5"/>
+                    <GradientStop Color="#33691E" Offset="1"/>
+                    <GradientStop Color="#8BC34A" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Fill="White" Height="500" Width="400" RadiusY="22.254" RadiusX="22.254">
+
+        </Rectangle>
+        <Grid Height="460" Width="400">
+            <Grid Height="100" VerticalAlignment="Top" Margin="0,30">
+                <Grid Width="180" HorizontalAlignment="Center">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Change Passowrd" FontSize="20"/>
+                        <Separator/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid Height="360" VerticalAlignment="Bottom">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
+                    <PasswordBox x:Name="oldPassTB" materialDesign:HintAssist.Hint="Old Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="49"/>
+                    <PasswordBox x:Name="newPassTB" materialDesign:HintAssist.Hint="New Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="49"/>
+                    <PasswordBox x:Name="newPassTB2" materialDesign:HintAssist.Hint="Repeat the new password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="55"/>
+
+                </StackPanel>
+            </Grid>
+            <Button x:Name="ApplyChangesBT" Content="Change Password" Height="50" Width="150" Margin="125,454,125,-44" Click="ApplyChangesBT_Click" />
+        </Grid>
+        <Image Source="Assests/Logo.png" Height="111" VerticalAlignment="Top" Margin="343,33,-27,0" RenderTransformOrigin="0.459,0.744">
+            <Image.Effect>
+                <DropShadowEffect Color="#FFBBBBBB" BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1"/>
+            </Image.Effect>
+        </Image>
+        <Ellipse x:Name="closeButton" Fill="DarkRed" Height="10" Width="10" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10,10" PreviewMouseUp="closeButton_PreviewMouseUp_1" >
+
+            <Ellipse.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0.1"/>
+            </Ellipse.Effect>
+        </Ellipse>
+
+        <Ellipse x:Name="minButton" Fill="DarkOrange" Height="10" Width="10" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="30,10" PreviewMouseUp="minButton_PreviewMouseUp_1" >
+
+            <Ellipse.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0.1"/>
+            </Ellipse.Effect>
+
+        </Ellipse>
+    </Grid>
+</Window>

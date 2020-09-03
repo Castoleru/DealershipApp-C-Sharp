@@ -1,0 +1,523 @@
+﻿<Window x:Class="WpfApp1.UserMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        
+        mc:Ignorable="d" Height="660" Width="1160" Visibility="Visible" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize"  Icon="Assests\Logo(1).ico">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Storyboard x:Key="MenuOpen">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="70" />
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200" />
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="MenuClose">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="200" />
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70" />
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="MenuOpen2">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridRest">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="1090" />
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="959" />
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="MenuClose2">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridRest">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="959" />
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1090" />
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid x:Name="Grid">
+                                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" 
+                                           Height="Auto" Fill="Transparent"/>
+                                <Border x:Name="Rectangle1" CornerRadius="10 0 0 10" HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch" Width="Auto" Height="Auto" 
+                                        Background="{TemplateBinding Background}"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="Tag" Value="Horizontal">
+                                    <Setter TargetName="Rectangle1" Property="Width" Value="Auto"/>
+                                    <Setter TargetName="Rectangle1" Property="Height" Value="7"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--SCROLLBARS-->
+            <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+                <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+                <Setter Property="Foreground" Value="#689F38"/>
+                <Setter Property="Background" Value="DarkGray"/>
+                <Setter Property="Width" Value="4"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollBar}">
+                            <Grid x:Name="GridRoot" Width="12" Background="{x:Null}">
+                                <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="true" Focusable="False">
+                                    <Track.Thumb>
+                                        <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" 
+                                               Style="{DynamicResource ScrollThumbs}"/>
+                                    </Track.Thumb>
+                                    <Track.IncreaseRepeatButton>
+                                        <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="False"/>
+                                    </Track.IncreaseRepeatButton>
+                                    <Track.DecreaseRepeatButton>
+                                        <RepeatButton x:Name="PageDown" Command="ScrollBar.PageUpCommand" Opacity="0" Focusable="False"/>
+                                    </Track.DecreaseRepeatButton>
+                                </Track>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
+                                    <Setter Value="{DynamicResource ButtonSelectBrush}" 
+                                            TargetName="Thumb" Property="Background"/>
+                                </Trigger>
+                                <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
+                                    <Setter Value="{DynamicResource DarkBrush}" TargetName="Thumb" Property="Background"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed"/>
+                                </Trigger>
+                                <Trigger Property="Orientation" Value="Horizontal">
+                                    <Setter TargetName="GridRoot" Property="LayoutTransform">
+                                        <Setter.Value>
+                                            <RotateTransform Angle="-90"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter TargetName="PART_Track" Property="LayoutTransform">
+                                        <Setter.Value>
+                                            <RotateTransform Angle="-90"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Width" Value="Auto"/>
+                                    <Setter Property="Height" Value="12"/>
+                                    <Setter TargetName="Thumb" Property="Tag" Value="Horizontal"/>
+                                    <Setter TargetName="PageDown" Property="Command" Value="ScrollBar.PageLeftCommand"/>
+                                    <Setter TargetName="PageUp" Property="Command" Value="ScrollBar.PageRightCommand"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+            <BeginStoryboard Storyboard="{StaticResource MenuOpen2}" />
+            <BeginStoryboard Storyboard="{StaticResource MenuOpen}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+            <BeginStoryboard Storyboard="{StaticResource MenuClose2}" />
+            <BeginStoryboard Storyboard="{StaticResource MenuClose}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation From="0" To="1" Duration="0:0:1" Storyboard.TargetProperty="Opacity">
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Background="LightGray">
+        <Grid Height="60" VerticalAlignment="Top" Background="#AED581">
+            <TextBlock FontFamily="Broadway" Text="Ponicar " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" />
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
+                <TextBlock x:Name="emailTextBlock" Text="Email" VerticalAlignment="Center" FontSize="18"/>
+                <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                    <StackPanel Width="150">
+                        <Button x:Name="ButtonAccInfo" Content="Account Info" Click="ButtonAccInfo_Click"/>
+                        <Separator/>
+                        <Button x:Name="ButtonLogOut"  Content="Logout" Click="ButtonLogOut_Click"/>
+                        <Button x:Name="ButtonClose"  Content="Close App" Click="ButtonClose_Click"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#689F38">
+            <StackPanel>
+                <Grid Height="60" Background="White">
+                    <Button x:Name="ButtonCloseMenu" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click">
+                        <materialDesign:PackIcon Foreground="#689F38" Kind="ArrowLeft" Width="25" Height="25"/>
+                    </Button>
+                    <Button x:Name="ButtonOpenMenu" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Top" HorizontalAlignment="Right" Click="ButtonOpenMenu_Click">
+                        <materialDesign:PackIcon Foreground="#689F38" Kind="Menu" Width="25" Height="25"/>
+                    </Button>
+                </Grid>
+                <ListView ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#AED581" Height="400" Margin="0,100">
+                    <ListViewItem Height="60" x:Name="ButtonHome" PreviewMouseUp="ButtonHome_PreviewMouseUp">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center" Width="35" Height="25"/>
+                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20,10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <!--item 1 end-->
+                    <ListViewItem Height="60" x:Name="CarItem" PreviewMouseUp="CarItem_PreviewMouseUp">
+                        <StackPanel Orientation="Horizontal" x:Name="CarStack" >
+                            <materialDesign:PackIcon x:Name="CarsImg"  Kind="Car" VerticalAlignment="Center" Width="35" Height="25"/>
+                            <TextBlock x:Name="CarText"  Text="Cars" VerticalAlignment="Center" Margin="20,10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <!--item 2 end-->
+                    <ListViewItem Height="60" x:Name="ParkingItem" PreviewMouseUp="ParkingItem_PreviewMouseUp">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Parking" VerticalAlignment="Center" Width="35" Height="25"/>
+                            <TextBlock Text="Parking" VerticalAlignment="Center" Margin="20,10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <!--item 4 end-->
+                    <ListViewItem Height="60" x:Name="infoDealearItem" Visibility="Hidden" PreviewMouseUp="infoDealearItem_PreviewMouseUp">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="USER"  VerticalAlignment="Center" Width="35" Height="25"/>
+                            <TextBlock Text="Dealers" VerticalAlignment="Center" Margin="20,10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <!--item 5 end-->
+                    <ListViewItem Height="60"  x:Name="addCars_Item" Visibility="Hidden" PreviewMouseUp="addCars_Item_PreviewMouseUp">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="AddBox" VerticalAlignment="Center" Width="35" Height="25"/>
+                            <TextBlock Text="Add Cars" VerticalAlignment="Center" Margin="20,10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <!--item 6 end-->
+                    <ListViewItem Height="60" x:Name="StatisticsItem" Visibility="Hidden" PreviewMouseUp="StatisticsItem_PreviewMouseUp">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="ChartDonut" VerticalAlignment="Center" Width="35" Height="25"/>
+                            <TextBlock Text="Statistics" VerticalAlignment="Center" Margin="20,10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <!-- item 3 end-->
+                </ListView>
+            </StackPanel>
+        </Grid >
+        <Grid Margin="60,60,0,0"  Width="1090" HorizontalAlignment="Right" Background="White" x:Name="gridRest">
+            <Grid x:Name="gridCarsImage" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.RowSpan="2">
+                    <TextBlock Text="Cars" HorizontalAlignment="Center" Margin="10" FontSize="28"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="QSTextBox" TextChanged="TextBox_TextChanged" materialDesign:HintAssist.Hint="Quick Search" Height="40" Width="150"  HorizontalAlignment="Left" Margin="279,9,0,1"/>
+                    <Button x:Name="ApplyButton" Click="ApplyButton_Click" HorizontalAlignment="Right" Width="120" Content="Apply filters" Margin="0,0,20,0" />
+                </Grid>
+                <Grid HorizontalAlignment="Left" Width="170"  Margin="0,0,0,10" Grid.ColumnSpan="1" Grid.Row="1">
+                    <ScrollViewer   >
+                        <StackPanel  HorizontalAlignment="Center" Margin="0,40,0,0">
+                            <StackPanel>
+                                <Separator/>
+                                <TextBlock Text="Price Range" HorizontalAlignment="Center" Margin="10" FontSize="18" Height="31" Width="110" />
+                                <RadioButton x:Name="prRB1" Content=" 4.000 - 10.000" Margin="0,5,0,0"/>
+                                <RadioButton x:Name="prRB2" Content=" 10.000 - 20.000" Margin="0,5,0,0"/>
+                                <RadioButton x:Name="prRB3" Content=" 20.000 - 30.000" Margin="0,5,0,0"/>
+                                <RadioButton x:Name="prRB4" Content=" 30.000 - 40.000" Margin="0,5,0,0"/>
+                                <RadioButton x:Name="prRB5" Content=" > 40.000" Margin="0,5,0,0"/>
+                                <TextBlock Text=" "/>
+                            </StackPanel>
+                            <StackPanel>
+                                <Separator/>
+                                <TextBlock Text="Fuel Type" HorizontalAlignment="Center" Margin="10" FontSize="18" Height="31" Width="110" />
+                                <RadioButton x:Name="ftRB1" Content="Diesel" Margin="0,5,0,0"/>
+                                <RadioButton x:Name="ftRB2" Content="Petrol" Margin="0,5,0,0" />
+                                <RadioButton x:Name="ftRB3" Content="Hybrid" Margin="0,5,0,0"/>
+                                <RadioButton x:Name="ftRB4" Content="Electirc" Margin="0,5,0,0"/>
+                                <TextBlock Text=" "/>
+                            </StackPanel>
+                            <StackPanel>
+                                <Separator/>
+                                <TextBlock Text="Horse Power" HorizontalAlignment="Center" Margin="10" FontSize="18" Height="31" Width="110" />
+                                <RadioButton x:Name="hpRB1" Content=" 75 - 105" Margin="0,5,0,0" />
+                                <RadioButton x:Name="hpRB2" Content=" 105 - 195" Margin="0,5,0,0" />
+                                <RadioButton x:Name="hpRB3"  Content=" > 195" Margin="0,5,0,0"/>
+                                <TextBlock Text=" "/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+                <ScrollViewer Grid.Column="1" Grid.Row="1" Background="#FFF1F1F1" >
+                    <StackPanel>
+                        <StackPanel Margin="20 0">
+                            <ListBox x:Name="ListViewProducts" ItemsSource="{Binding Masini}" PreviewMouseUp="ListViewProducts_PreviewMouseUp"
+                                      ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                     ScrollViewer.CanContentScroll="False" >
+                                <ListBox.ItemTemplate >
+                                    <DataTemplate>
+                                        <Border Margin="10" Width="220" Height="270">
+                                            <StackPanel>
+                                                <Border Width="210" Height="150" CornerRadius="5" Margin="5">
+                                                    <Border.Effect>
+                                                        <DropShadowEffect ShadowDepth="1"/>
+                                                    </Border.Effect>
+                                                    <Border.Background>
+                                                        <ImageBrush ImageSource="{Binding URL[0]}"/>
+                                                    </Border.Background>
+                                                </Border>
+                                                <StackPanel>
+                                                    <TextBlock Margin="5" Text="{Binding carPrice, StringFormat=Price: {0:C}}" FontSize="17" FontFamily="Franklin Gothic Medium"/>
+                                                    <TextBlock Margin="5 0" Text="{Binding name, StringFormat=Name: {0}}" FontSize="15"/>
+                                                    <TextBlock Margin="5 0" Text="{Binding HorsePower,StringFormat=Horse Power: {0}}" FontSize="15"/>
+                                                    <TextBlock Margin="5 0" Text="{Binding FuelType,StringFormat=Fuel Type: {0}}" FontSize="15"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel />
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                            </ListBox>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <Grid x:Name="gridParking" Visibility="Hidden" >
+                <Border Margin="10,10,30,10">
+                    <StackPanel Margin="10,0,0,10">
+                        <Border Height="500" CornerRadius="25" Margin="52,5,59,5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="Assests/parcare.jpg" />
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0" Text="" FontSize="15"/>
+                        <TextBlock Margin="5" Text="Parcare PoniCar" FontSize="20" FontFamily="Franklin Gothic Medium"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Grid x:Name="gridHome" Visibility="Visible">
+                <Grid Margin="30,20" Height="120" VerticalAlignment="Top">
+                    <Grid Margin="10,0,0,0" Width="120" HorizontalAlignment="Left">
+                        <Image Source="Assests/Logo.png" Margin="-39,-18,-105,-84"/>
+                    </Grid>
+                    <Grid Margin="0,0,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="61*"/>
+                            <RowDefinition Height="59*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock  FontFamily="Champagne &amp; Limousines" FontSize="34" Text= " Masina visurilor tale e aici!" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="345,40,0,39" Width="416" Grid.RowSpan="2"></TextBlock>
+                    </Grid>
+                </Grid>
+                <Grid Height="377" Width="305" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30,0,0,10">
+                    <StackPanel>
+                        <Separator/>
+                        <TextBlock Text="PoniCar Dealership " FontFamily="Champagne &amp; Limousines" Margin="0,10" FontSize="24" Foreground="Gray"/>
+                        <TextBlock Text="Jud. Neamt, Scaricica, " FontFamily="Champagne &amp; Limousines" Margin="0,10" FontSize="24" Foreground="Gray"/>
+                        <TextBlock Text="Strada Mioritei, nr 5" TextAlignment="Right" FontFamily="Champagne &amp; Limousines" Margin="0,0,0,10" FontSize="24" Foreground="Gray"/>
+                        <Separator/>
+                        <TextBlock Text="Numar Telefon:" FontFamily="Champagne &amp; Limousines" Margin="0,10" FontSize="24" Foreground="Gray"/>
+                        <TextBlock Text="0776.642.270" TextAlignment="Right"  FontFamily="Champagne &amp; Limousines" FontSize="24" Margin="0,0,0,10" Foreground="Gray"/>
+                        <Separator/>
+                        <TextBlock Text="Email:" Margin="0,10" FontFamily="Champagne &amp; Limousines" FontSize="24" Foreground="Gray"/>
+                        <TextBlock Text="dealer@ponicar.com" TextAlignment="Right" FontFamily="Champagne &amp; Limousines" FontSize="24" Foreground="Gray"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Margin="370,140,30,10" >
+                    <m:Map CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" ZoomLevel="16" Center="46.940337, 26.265865" Margin="0,0,0,10">
+                        <Canvas
+                                        m:MapLayer.Position="46.940337, 26.265865"
+                                        m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30" >
+                            <materialDesign:PackIcon Kind="MapMarker" Width="30" Height="30" Foreground="DarkGreen"/>
+                        </Canvas>
+                    </m:Map>
+                </Grid>
+            </Grid>
+            <Grid x:Name="gridDealerInfo" Visibility="Hidden">
+                <Grid Height="500" Width="300" Margin="20,20" HorizontalAlignment="Left" >
+                    <StackPanel>
+                        <TextBlock Text="Dealers" FontSize="30" TextAlignment="Center" />
+                        <Separator/>
+                        <ListBox  x:Name="dealrLB"  Margin="5,5" VerticalAlignment="Top" PreviewMouseUp="dealrLB_PreviewMouseUp">
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="FontSize" Value="28" />
+                                    <Setter Property="Margin" Value="5" />
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                        </ListBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Height="200" VerticalAlignment="Top" Margin="0,70,30,0" HorizontalAlignment="Right" Width="500">
+                    <StackPanel Width="250" HorizontalAlignment="Left">
+                        <TextBlock Text="SalesNumber" FontSize="30" Foreground="DarkGreen"  Margin="0,10"/>
+                        <TextBlock Text="Salary" FontSize="30" Foreground="DarkRed"  Margin="0,10"/>
+                    </StackPanel>
+                    <StackPanel Width="250" HorizontalAlignment="Right">
+                        <TextBlock  x:Name="SalesNumberTB" TextAlignment="Right" FontSize="30" Foreground="DarkGreen"  Margin="0,10"/>
+                        <TextBlock x:Name="SalaryTB" TextAlignment="Right" FontSize="30" Foreground="DarkRed"  Margin="0,10"/>
+                    </StackPanel>
+                </Grid>
+                <Button Content="Fire!" FontSize="30" x:Name="dealerFireBt" Click="dealerFireBt_Click"
+                    Height="60" Background="IndianRed" BorderBrush="#FF8F2515" Margin="0,270,30,270" Foreground="#DD000000" HorizontalAlignment="Right" Width="180" />
+                <Button Content="Change Salary!" FontSize="30" x:Name="promoteDealerBt" Click="promoteDealerBt_Click"
+                    Height="60" Margin="0,395,288,145" Foreground="#DD000000" HorizontalAlignment="Right" Width="242" />
+                <Button Content="Add!" FontSize="30" x:Name="addDealerBt" Click="addDealerBt_Click"
+                    Height="60" Margin="0,395,30,145" Foreground="#DD000000" HorizontalAlignment="Right" Width="180" />
+                <Grid Margin="0,460,0,0" x:Name="gridChangeS" Visibility="Hidden" HorizontalAlignment="Right" Width="530">
+                    <TextBox x:Name="SumTB" materialDesign:HintAssist.Hint="New Salary" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,43,294,45" HorizontalAlignment="Right" Width="236" />
+                    <Button Click="ChangeButton_Click" Content="Change!" FontSize="30" x:Name="ChangeButton" Margin="324,26,28,46" Height="Auto"/>
+                </Grid>
+            </Grid>
+            <Grid x:Name="gridAddCar" Visibility="Hidden">
+                <Grid Height="80" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="9*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="20" Text="To add a car all text must be completed" Margin="0,29,325,10" Height="41" Width="421" Grid.RowSpan="2"/>
+                </Grid>
+                <Grid VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="270" Height="435" Margin="5,0,0,62">
+                    <StackPanel>
+                        <TextBox x:Name="makeACTB" materialDesign:HintAssist.Hint="Car Maker" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="modelACTB" materialDesign:HintAssist.Hint="Car Model" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="priceACTB" materialDesign:HintAssist.Hint="Car Price" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="yearACTB" materialDesign:HintAssist.Hint="Car Year" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,2.5"/>
+                        <TextBox x:Name="horsePowerACTB" materialDesign:HintAssist.Hint="Horse Power" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="FuelTypeACTB" materialDesign:HintAssist.Hint="Fuel Type" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <CheckBox x:Name="isSoldACCB" materialDesign:CheckBoxAssist.CheckBoxSize="25" Content="Is Sold" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                    </StackPanel>
+                </Grid>
+                <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="300" Height="435" Margin="0,0,345,62" >
+                    <StackPanel>
+                        <TextBox x:Name="colorACTB" materialDesign:HintAssist.Hint="Car Color" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="Co2EACTB" materialDesign:HintAssist.Hint="Car Emission" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="parkingSpotACTB" materialDesign:HintAssist.Hint="Car Parking Spot" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="cosumptionACTB" materialDesign:HintAssist.Hint="Car Cosumption" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,2.5"/>
+                        <TextBox x:Name="tractionACTB" materialDesign:HintAssist.Hint="Car Traction" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                        <TextBox x:Name="CilindricalACTB" materialDesign:HintAssist.Hint="Car Cilindrical Capacity" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5"/>
+                    </StackPanel>
+                </Grid>
+                <Grid VerticalAlignment="Bottom" Height="435" Margin="0,0,10,62" HorizontalAlignment="Right" Width="258" >
+                    <Grid Height="100" VerticalAlignment="Top">
+                        <TextBox Height="50" VerticalAlignment="Top" x:Name="featureACTB" materialDesign:HintAssist.Hint="Car Features" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0,5,10,0"/>
+                        <Label x:Name="countFACL" Content="0" Height="40" Width="80" FontSize="24" VerticalAlignment="Bottom" HorizontalAlignment="left" Visibility="Hidden"/>
+                        <Button x:Name="addFeaturACB" Content="Add" Click="addFeature_Click" Height="40" Width="80" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                    </Grid>
+                    <Grid  Height="108" VerticalAlignment="Top" Margin="0,172,0,0">
+                        <Label x:Name="countPACL" Content="0" Height="40" Width="60"  FontSize="20" VerticalAlignment="Bottom" HorizontalAlignment="right" Visibility="Hidden" Margin="0,0,-30,10"/>
+                        <Button x:Name="addPhotosACB" Height="50" Width="180" Content="Add Photos" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="28" Click="addPhotosACB_Click" Margin="0,14,10,44"/>
+                    </Grid>
+                    <Grid Height="136" VerticalAlignment="Bottom" >
+                        <Button x:Name="addCarACB" Height="50" Width="180" Content="Add Car" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="28" Click="addCarACB_Click" Margin="0,0,10,0" />
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid x:Name="gridStatistics" Visibility="Hidden">
+                <Grid Margin="20" Height="260" Width="500" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid Height="60" VerticalAlignment="Top">
+                        <TextBlock Text="Price Sells" FontSize="40" Margin="162,0,163,0" />
+                        <Separator VerticalAlignment="Bottom" />
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Left">
+                        <StackPanel VerticalAlignment="Bottom" Margin="5,0,0,0">
+                            <TextBlock  Text="4.000 - 10.000" FontSize="30"/>
+                            <TextBlock  Text="10.000 - 20.000" FontSize="30"/>
+                            <TextBlock  Text="20.000 - 30.000" FontSize="30"/>
+                            <TextBlock  Text="30.000 - 40.000" FontSize="30"/>
+                            <TextBlock  Text="> 40.000" FontSize="30"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Right">
+                        <StackPanel VerticalAlignment="Bottom">
+                            <TextBlock x:Name="Price410" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="Price1020" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="Price2030" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="Price3040" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="Price40B" Text="test" FontSize="30" TextAlignment="Right"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+
+                <Grid  Margin="570,20,20,0" Height="260" VerticalAlignment="Top">
+                    <Grid Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="500">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="31*"/>
+                            <RowDefinition Height="29*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="FuelType Sells" FontSize="40" Margin="120,0,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" Width="245" />
+                        <Separator VerticalAlignment="Bottom" Margin="0,0,0,2" Grid.Row="1" />
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Left">
+                        <StackPanel VerticalAlignment="Bottom">
+                            <TextBlock  Text="Petrol" FontSize="30"/>
+                            <TextBlock  Text="Diesel" FontSize="30"/>
+                            <TextBlock  Text="Hybrid" FontSize="30"/>
+                            <TextBlock  Text="Electric" FontSize="30"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Right">
+                        <StackPanel VerticalAlignment="Bottom"  Margin="5,0">
+                            <TextBlock x:Name="FuelTypeP" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="FuelTypeD" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="FuelTypeH" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="FuelTypeE" Text="test" FontSize="30" TextAlignment="Right"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <Grid  Margin="20" Height="260" Width="500" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    <Grid Height="60" VerticalAlignment="Top">
+                        <TextBlock Text="HorsePower Sells" FontSize="40" Margin="100,0,99,0" />
+                        <Separator VerticalAlignment="Bottom" />
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Left">
+                        <StackPanel VerticalAlignment="Bottom" Margin="5,0,0,30">
+                            <TextBlock  Text="75-105" FontSize="30"/>
+                            <TextBlock  Text="105-195" FontSize="30"/>
+                            <TextBlock  Text=">195" FontSize="30"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Right">
+                        <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,30">
+                            <TextBlock x:Name="Hp75" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="Hp105" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock x:Name="Hp195" Text="test" FontSize="30" TextAlignment="Right"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <Grid  Margin="570,0,20,20" Height="260" VerticalAlignment="Bottom">
+                    <Grid Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="500">
+                        <TextBlock Text="Best Sells" FontSize="40" Margin="168,0,0,0" HorizontalAlignment="Left" Width="164" />
+                        <Separator VerticalAlignment="Bottom" />
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Left" Margin="5">
+                        <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,30">
+                            <TextBlock Foreground="DarkGreen" Text="Best Price" FontSize="30"/>
+                            <TextBlock Foreground="DarkGreen"  Text="Best Fuel" FontSize="30"/>
+                            <TextBlock Foreground="DarkGreen"  Text="Best Hp" FontSize="30"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Width="250" HorizontalAlignment="Right" Margin="5,0" >
+                        <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,30">
+                            <TextBlock Foreground="DarkGreen" x:Name="BestPrice" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock Foreground="DarkGreen" x:Name="BestFuel" Text="test" FontSize="30" TextAlignment="Right"/>
+                            <TextBlock Foreground="DarkGreen" x:Name="BestHp" Text="test" FontSize="30" TextAlignment="Right"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

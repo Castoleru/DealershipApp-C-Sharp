@@ -1,0 +1,187 @@
+﻿<Window x:Class="WpfApp1.ProductPrezentation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Icon="Assests\Logo(1).ico"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="ProductPrezentation" Height="670.612" Width="1240.372" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid x:Name="Grid">
+                                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" 
+                                           Height="Auto" Fill="Transparent"/>
+                                <Border x:Name="Rectangle1" CornerRadius="10 0 0 10" HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch" Width="Auto" Height="Auto" 
+                                        Background="{TemplateBinding Background}"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="Tag" Value="Horizontal">
+                                    <Setter TargetName="Rectangle1" Property="Width" Value="Auto"/>
+                                    <Setter TargetName="Rectangle1" Property="Height" Value="7"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--SCROLLBARS-->
+            <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+
+                <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+                <Setter Property="Foreground" Value="#689F38"/>
+                <Setter Property="Background" Value="DarkGray"/>
+                <Setter Property="Width" Value="4"/>
+                <Setter Property="Template">
+
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollBar}">
+                            <Grid x:Name="GridRoot" Width="12" Background="{x:Null}">
+                                <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="true" Focusable="False">
+                                    <Track.Thumb>
+                                        <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" 
+                                               Style="{DynamicResource ScrollThumbs}"/>
+                                    </Track.Thumb>
+                                    <Track.IncreaseRepeatButton>
+                                        <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="False"/>
+                                    </Track.IncreaseRepeatButton>
+                                    <Track.DecreaseRepeatButton>
+                                        <RepeatButton x:Name="PageDown" Command="ScrollBar.PageUpCommand" Opacity="0" Focusable="False"/>
+                                    </Track.DecreaseRepeatButton>
+                                </Track>
+                            </Grid>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
+                                    <Setter Value="{DynamicResource ButtonSelectBrush}" 
+                                            TargetName="Thumb" Property="Background"/>
+                                </Trigger>
+                                <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
+                                    <Setter Value="{DynamicResource DarkBrush}" TargetName="Thumb" Property="Background"/>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed"/>
+                                </Trigger>
+                                <Trigger Property="Orientation" Value="Horizontal">
+                                    <Setter TargetName="GridRoot" Property="LayoutTransform">
+                                        <Setter.Value>
+                                            <RotateTransform Angle="-90"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter TargetName="PART_Track" Property="LayoutTransform">
+                                        <Setter.Value>
+                                            <RotateTransform Angle="-90"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Width" Value="Auto"/>
+                                    <Setter Property="Height" Value="12"/>
+                                    <Setter TargetName="Thumb" Property="Tag" Value="Horizontal"/>
+                                    <Setter TargetName="PageDown" Property="Command" Value="ScrollBar.PageLeftCommand"/>
+                                    <Setter TargetName="PageUp" Property="Command" Value="ScrollBar.PageRightCommand"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+        
+    </Window.Resources>
+    <Window.Triggers>
+
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation From="0" To="1" Duration="0:0:1" Storyboard.TargetProperty="Opacity">
+
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+
+    </Window.Triggers>
+    <Grid>
+        <StackPanel>
+            <Grid Background="LightGray">
+                <Grid Height="60" VerticalAlignment="Top" Background="#AED581">
+                    <TextBlock FontFamily="Broadway" Text="Ponicar " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" />
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" >
+                        <TextBlock x:Name="emailTextBlock" Text="Email" VerticalAlignment="Center" FontSize="18"/>
+                        <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                            <StackPanel Width="150">
+                                <Button x:Name="ButtonAccInfo" Content="Account Info" Click="ButtonAccInfo_Click"/>
+                                <Separator/>
+                                <Button x:Name="ButtonLogOut"  Content="Logout" Click="ButtonLogOut_Click"/>
+                                <Button x:Name="ButtonClose"  Content="Close App" Click="ButtonClose_Click"/>
+
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+                    </StackPanel>
+                    <Button x:Name="ButtonBack" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Visible"  Click="ButtonBack_Click">
+                        <materialDesign:PackIcon Foreground="Black" Kind="ArrowLeft" Width="25" Height="25"/>
+                    </Button>
+                </Grid>
+            </Grid>
+
+            <Grid Margin="20,20,20,20" VerticalAlignment="Top" Background="White" Height="568">
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="20" ShadowDepth="1"/>
+                </Grid.Effect>
+                <Image  x:Name="BigImg"  Width="400" Height="400" Margin="170,50,505,84"  />
+                <ListBox  x:Name="PhotosList"  ItemsSource="{Binding Product}" PreviewMouseUp="PhotosList_PreviewMouseUp"  Margin="36,50,984,84"
+                                      ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                     ScrollViewer.CanContentScroll="True" >
+
+                    <ListBox.ItemTemplate >
+                        <DataTemplate>
+                            <Border Margin="10" Width="120" Height="100">
+                                <StackPanel>
+                                    <Border Width="110" Height="90" CornerRadius="5" Margin="5">
+                                       
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{Binding Image}"/>
+                                        </Border.Background>
+                                    </Border>
+                                  
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    
+                </ListBox>
+
+                
+                <StackPanel Margin="700,50,286,50">
+                    <TextBlock x:Name="brand" Text="Nume Brand" FontSize="18" TextWrapping="Wrap" Margin="0 5" Foreground="#FF6A6A6A"/>
+                    <TextBlock x:Name="model" Text="Nume Model" FontSize="22" TextWrapping="Wrap" Foreground="#FF6A6A6A"/>
+                    <TextBlock x:Name="culoare" Text="Culoare" FontSize="14" Margin="0 5" Foreground="DarkGray"/>
+                    <TextBlock x:Name="combustibil" Text="Combustibil" FontSize="14" Margin="0 5" Foreground="DarkGray"/>
+                    <TextBlock x:Name="caiputere" Text="HorsePower" FontSize="14" Margin="0 5" Foreground="DarkGray"/>
+                    <TextBlock x:Name="tractiune" Text="Traction" FontSize="14" Margin="0 5" Foreground="DarkGray"/>
+                    <TextBlock x:Name="capcilindrica" Text="Cilindrical Cap" FontSize="14" Margin="0 5" Foreground="DarkGray"/>
+                    <TextBlock x:Name="locparcare" Text="ParkingSpot" FontSize="14" Margin="0 5" Foreground="DarkGray"/>
+                    <TextBlock Visibility="Hidden" x:Name="km" Text="Km on Bord" FontSize="14" Margin="0 5" Foreground="DarkGray"/>
+                    <TextBlock x:Name="pret" Text="" HorizontalAlignment="Center" FontSize="25" Margin="0 15" Foreground="#FF6A6A6A"/>
+
+                    <Button  Background="#8BC34A" BorderBrush="#8BC34A" Content="SHOP NOW" Margin="0 20" Click="Button_Click"/>
+                </StackPanel>
+                <StackPanel Margin="969,50,10,84">
+                    <TextBlock Text="Features" FontSize="22" Margin="0 5" Foreground="#FF6A6A6A"/>
+                    <ListBox Height="350" x:Name="features">
+
+                    </ListBox>
+
+
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

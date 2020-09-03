@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfApp1.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Icon="Assests\Logo(1).ico"
+        Title="Sign Up" Height="700" Width="350" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Triggers>
+
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation From="0" To="1" Duration="0:0:1" Storyboard.TargetProperty="Opacity">
+
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+
+    </Window.Triggers>
+    <Grid Height="700" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="249*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Height="500" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#C5E1A5"/>
+                    <GradientStop Color="#33691E" Offset="1"/>
+                    <GradientStop Color="#8BC34A" Offset="0.5"/>
+
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="Assests/Logo.png" Height="266" VerticalAlignment="Top" Margin="35,57,35,0"/>
+        <Rectangle Width="280" Height="350" Fill="White" VerticalAlignment="Bottom" Margin="35,0,35,98" RadiusY="14.5" RadiusX="14.5">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFBBBBBB" BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid Width="280" Height="350" VerticalAlignment="Bottom" Margin="35,0,35,98">
+            <TextBlock Text="Sign Up"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="18"/>
+            <StackPanel VerticalAlignment="Center" Margin="10">
+                <TextBox x:Name="emailTB" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="49"/>
+                <TextBox x:Name="FirstNameTB" materialDesign:HintAssist.Hint="FirstName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="49"/>
+                <TextBox x:Name="LastNameTB" materialDesign:HintAssist.Hint="LastName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="49"/>
+                <PasswordBox x:Name="PassP" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="55"/>
+                <TextBox x:Name="SallaryTB" materialDesign:HintAssist.Hint="Salary" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="49"/>
+
+            </StackPanel>
+
+        </Grid>
+        <Button Width="150" Background="#8BC34A" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="100,0,100,75.214" Content="Sing Up" Click="Button_Click"/>
+        
+        <Ellipse Fill="DarkRed" Height="10" Width="10" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10,10" PreviewMouseLeftButtonUp="Ellipse_PreviewMouseLeftButtonUp" >
+
+            <Ellipse.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0.1"/>
+            </Ellipse.Effect>
+
+        </Ellipse>
+
+    </Grid>
+</Window>
+

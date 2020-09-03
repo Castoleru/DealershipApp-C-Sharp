@@ -1,0 +1,223 @@
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\ii-proj\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\App.baml
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\SignUp.g.cs
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\SignUp.baml
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\Fpas.g.cs
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\Fpas.baml
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\UserMenu.g.cs
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\UserMenu.baml
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\NewLogin.g.cs
+D:\ii-proj\WpfApp1\WpfApp1\obj\Debug\NewLogin.baml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\Fpas.g.cs
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\NewLogin.g.cs
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\SignUp.g.cs
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\UserMenu.g.cs
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\App.baml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\Fpas.baml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\NewLogin.baml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\SignUp.baml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\UserMenu.baml
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\AccInfo.g.cs
+D:\ii-proj\PoniCar\WpfApp1\WpfApp1\obj\Debug\AccInfo.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\AccInfo.g.cs
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\Fpas.g.cs
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\NewLogin.g.cs
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\SignUp.g.cs
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\UserMenu.g.cs
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\App.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\AccInfo.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\Fpas.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\NewLogin.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\SignUp.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\UserMenu.baml
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Alexandra\Desktop\PoniCar-master\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\AccInfo.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\Fpas.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\NewLogin.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\SignUp.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\UserMenu.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\App.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\AccInfo.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\Fpas.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\NewLogin.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\SignUp.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\UserMenu.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\ProductPrezentation.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\ProductPrezentation.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\MessageBoxPoni.g.cs
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\MessageBoxPoni.baml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\PCDB.mdf
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\bin\Debug\PCDB_log.ldf
+D:\ii-proj\Desginer-s_Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\PCDB.mdf
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\PCDB_log.ldf
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\AccInfo.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\Fpas.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MessageBoxPoni.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\NewLogin.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\ProductPrezentation.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\SignUp.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\UserMenu.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\App.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\AccInfo.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\Fpas.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MessageBoxPoni.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\NewLogin.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\ProductPrezentation.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\SignUp.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\UserMenu.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\PCDB.mdf
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\PCDB_log.ldf
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\AccInfo.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\Fpas.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MessageBoxPoni.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\NewLogin.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\ProductPrezentation.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\SignUp.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\UserMenu.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\App.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\AccInfo.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\Fpas.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\MessageBoxPoni.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\NewLogin.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\ProductPrezentation.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\SignUp.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\UserMenu.baml
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+E:\FACULTA\AN3_SEM2\INFORMATICA INDUSTRIALA\Proiect\proiect_repo\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\ChangePass.g.cs
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\obj\Debug\ChangePass.baml
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\Syncfusion.Licensing.dll
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\LiveCharts.Wpf.dll
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\LiveCharts.Wpf.pdb
+D:\ii-proj\Developer-s-Work\WpfApp1\WpfApp1\bin\Debug\LiveCharts.Wpf.xml
